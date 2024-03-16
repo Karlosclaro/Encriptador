@@ -38,9 +38,10 @@ main {
     background: white;
     background-image: linear-gradient(
         to top, transparent, white
-      ), url(/imagens/boneco.png);
+      ), url(/imagens/rapazdiamante.jpg);
+    background-size: 126%;
     background-repeat: no-repeat;
-    background-position: 0%;
+    background-position: 34%;
     border: none;
     border-radius: 24px;
     color: #0A3871;
@@ -92,7 +93,36 @@ main {
     width: 336px;
 }
 
+.btn-colar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 166px;
+    margin-top: 75px;
+    position: absolute;
+    width: 336px;
+}
+
 .informacao {
     color: #495057;
     font-size:18px;
+
+}
+
+.btn-copiar:hover {
+    background-color: #2980b9; /* cor de fundo ao passar o mouse */
+}
+
+.btn-colar:hover {
+    background-color: #2980b9; /* cor de fundo ao passar o mouse */
+}
+
+.btn-desencriptar:hover {
+    background-color: #2980b9; /* cor de fundo ao passar o mouse */
+}
+
+.btn-encriptar:hover {
+    background-color: #2980b9; /* cor de fundo ao passar o mouse */
 }

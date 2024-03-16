@@ -51,11 +51,21 @@ function desencriptar(stringDescriptada) {
 
     return stringDescriptada;
 }
-
-function copiar (e) {
-
-    let mensagem = document.querySelector(".mensagem");
+function copiar() {
     mensagem.select();
-    document.execCommand("copy");
-    
-  }
+    navigator.clipboard.writeText(mensagem.value);
+    mensagem.value = "";
+}
+alert("Digite o texto e para CRIPTOGRAFAR, clique no botão criptografar e para DESCRIPTOGRAFAR, clique no botão Descriptografar.");
+
+function colar() {
+    let mensagem = document.querySelector(mensagem.value);
+    navigator.clipboard.readText()
+        .then(text => {
+            textArea.value = text;
+        })
+        .catch(err => {
+            console.error('Erro ao colar o texto: ', err);
+        });
+}
+  
