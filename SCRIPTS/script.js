@@ -32,24 +32,24 @@ function encriptar(stringEncriptada) {
     return stringEncriptada;
 }
 
-function btnDescriptar() {
-    const textoDescriptado = desencriptar(textArea.value);
-    mensagem.value = textoDescriptado
+function decryptBtn() {
+    const decryptedText = decrypt(textArea.value);
+    message.value = decryptedText;
     textArea.value = "";
 }
 
-function desencriptar(stringDescriptada) {
+function decrypt(encryptedString) {
 
-    let matrizCodigo = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"], ["o" , "ober"], ["u" , "ufat"]];
-    stringDescriptada = stringDescriptada.toLowerCase();
+    let codeMatrix = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    encryptedString = encryptedString.toLowerCase();
 
-    for(let i = 0; i < matrizCodigo.length; i++) {
-        if(stringDescriptada.includes(matrizCodigo[i][1])) {
-            stringDescriptada = stringDescriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+    for (let i = 0; i < codeMatrix.length; i++) {
+        if (encryptedString.includes(codeMatrix[i][1])) {
+            encryptedString = encryptedString.replaceAll(codeMatrix[i][1], codeMatrix[i][0]);
         }
     }
 
-    return stringDescriptada;
+    return encryptedString;
 }
 function copiar() {
     mensagem.select();
